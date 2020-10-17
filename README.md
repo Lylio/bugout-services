@@ -11,4 +11,5 @@ Issue/bug tracking software. Demo can be found at (coming soon).
 1. Coming soon
 
 #### Maven Launch
-1. Coming soon
+1. `mvn spring-boot:run`
+2. Open browser at http://localhost:8080

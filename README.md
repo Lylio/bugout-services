@@ -9,7 +9,7 @@ Issue/bug tracking software. Demo can be found at (coming soon).
 
 #### Docker Launch
 1. `docker build -t bugout-services .`
-2. docker run -p 8080:8080 bugout-services:latest
+2. `docker run -p 8080:8080 bugout-services:latest`
 3. Navigate to http://localhost:8080
 
 #### Maven Launch

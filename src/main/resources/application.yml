@@ -1,0 +1,29 @@
+spring.jpa.hibernate.ddl-auto: create-drop
+spring.jpa.show-sql: false
+
+# LOGGING
+logging:
+  file: /home/lylio/Documents/logs/chatty.log
+
+# BANNER
+spring.banner.location: classpath:banner.txt
+
+# ENDPOINT MANAGEMENT
+management:
+  endpoint:
+    info:
+      enabled: true
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      show-details: always
+      enabled: true
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

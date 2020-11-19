@@ -5,7 +5,7 @@
 ## Built with Spring Boot and Angular.js
 
 ### Description
-Issue/bug tracking software. Demo can be found at http://bugout-services.herokuapp.com.
+Issue/bug tracking software. Demo can be found at http://bugout.lylio.tech
 
 #### Docker Launch
 1. `docker build -t bugout-services .`

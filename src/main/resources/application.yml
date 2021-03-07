@@ -1,9 +1,16 @@
-spring.jpa.hibernate.ddl-auto: create-drop
-spring.jpa.show-sql: false
+## Database Properties
+spring.datasource.url: jdbc:postgresql://localhost:5432/bugout
+spring.datasource.username: root
+spring.datasource.password: P@$$w0rd
+spring.jpa.hibernate.ddl-auto: update
+
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
 # LOGGING
 logging:
-  file: /home/lylio/Documents/logs/chatty.log
+  file: /home/lylio/Documents/logs/bugout.log
 
 # BANNER
 spring.banner.location: classpath:banner.txt
@@ -26,4 +33,5 @@ management:
     web:
       exposure:
         include: "*"
+
 

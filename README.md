@@ -1,11 +1,17 @@
 ![](https://github.com/Lylio/image-repo/blob/master/logos/java.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/spring-boot.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/angular.png?raw=true)
+![](https://github.com/Lylio/image-repo/blob/master/logos/postgres.png?raw=true)
 # BugOut-Services
-## Built with Spring Boot and Angular.js
+## Built with Spring Boot, Angular.js and PostgreSQL
 
 ### Description
 Issue/bug tracking software. Demo can be found at http://bugout.lylio.tech
+
+#### Database
+1. Create a Postgres database called 'bugout':  
+   `CREATE DATABASE bugout`
+2. Create tables and insert test data by running src/main/resources/import.sql
 
 #### Docker Launch
 1. `docker build -t bugout-services .`

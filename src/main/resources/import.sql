@@ -1,40 +1,580 @@
--- these tables need to be created
-CREATE TABLE ISSUES (ID INTEGER NOT NULL IDENTITY, TITLE VARCHAR(50) NOT NULL, DESCRIPTION VARCHAR(255), CREATIONDATE DATE, DEVELOPERID INTEGER, TYPE TINYINT NOT NULL, STATUS TINYINT NOT NULL, PRIORITY TINYINT, POINT TINYINT, ASSIGNEDWEEK TINYINT,  PRIMARY KEY (ID))
-
--- ass developers
-INSERT INTO DEVELOPERS (name) VALUES('Test Developer 1');
-INSERT INTO DEVELOPERS (name) VALUES('Test Developer 2');
-INSERT INTO DEVELOPERS (name) VALUES('Test Developer 3');
-
---add bugs
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (1, 'test bug 1', 'bug 1 description', '2016-09-03 00:00:00', 2, 1, 3, 1, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (2, 'test bug 2', 'bug 2 description', '2016-09-03 00:00:00', 1, 1, 2, 3, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (3, 'test bug 3', 'bug 3 description', '2016-09-03 00:00:00', 2, 1, 1, 2, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (4, 'test bug 4', 'bug 4 description', '2016-09-03 00:00:00', 1, 1, 2, 1, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (5, 'test bug 5', 'bug 5 description', '2016-09-03 00:00:00', 1, 1, 3, 3, null);
-
--- add stories
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT, ASSIGNEDWEEK) VALUES (6, 'test story 1', 'story 1 description', '2016-09-03 00:00:00', 1, 2, 3, null, 1, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT, ASSIGNEDWEEK) VALUES (7, 'test story 2', 'story 2 description', '2016-09-03 00:00:00', 2, 2, 2, null, 2, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT, ASSIGNEDWEEK) VALUES (8, 'test story 3', 'story 3 description', '2016-09-03 00:00:00', 3, 2, 2, null, 3, null);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (9, 'test story 4', 'story 4 description', '2016-09-03 00:00:00', null, 2, 2, null, 5);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (10, 'test story 5', 'story 5 description', '2016-09-03 00:00:00', null, 2, 2, null, 8);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (11, 'test story 6', 'story 6 description', '2016-09-03 00:00:00', null, 2, 2, null, 8);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (12, 'test story 7', 'story 7 description', '2016-09-03 00:00:00', null, 2, 2, null, 2);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (13, 'test story 8', 'story 8 description', '2016-09-03 00:00:00', null, 2, 2, null, 3);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (14, 'test story 9', 'story 9 description', '2016-09-03 00:00:00', null, 2, 2, null, 5);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (15, 'test story 10', 'story 10 description', '2016-09-03 00:00:00', null, 2, 2, null, 8);
-
-
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (16, 'test story 11', 'story 11 description', '2016-09-03 00:00:00', null, 2, 2, null, 1);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (17, 'test story 12', 'story 12 description', '2016-09-03 00:00:00', null, 2, 2, null, 2);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (18, 'test story 13', 'story 13 description', '2016-09-03 00:00:00', null, 2, 2, null, 3);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (19, 'test story 14', 'story 14 description', '2016-09-03 00:00:00', null, 2, 2, null, 8);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (20, 'test story 15', 'story 15 description', '2016-09-03 00:00:00', null, 2, 2, null, 8);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (21, 'test story 16', 'story 16 description', '2016-09-03 00:00:00', null, 2, 2, null, 1);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (22, 'test story 17', 'story 17 description', '2016-09-03 00:00:00', null, 2, 2, null, 2);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (23, 'test story 18', 'story 18 description', '2016-09-03 00:00:00', null, 2, 2, null, 2);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (24, 'test story 19', 'story 19 description', '2016-09-03 00:00:00', null, 2, 2, null, 5);
-INSERT INTO ISSUES (ID, TITLE, DESCRIPTION, CREATIONDATE, DEVELOPERID, TYPE, STATUS, PRIORITY, POINT) VALUES (25, 'test story 20', 'story 20 description', '2016-09-03 00:00:00', null, 2, 2, null, 8);
-
-
+create table ISSUES (
+                        ID int generated by default as identity not null,
+                        TITLE varchar(50) not null,
+                        DESCRIPTION varchar(255),
+                        CREATIONDATE date,
+                        DEVELOPERID int,
+                        TYPE smallint not null,
+                        STATUS smallint not null,
+                        PRIORITY smallint,
+                        POINT smallint,
+                        ASSIGNEDWEEK smallint,
+                        primary key (ID)
+);
+create table DEVELOPERS (
+                            ID int generated by default as identity not null,
+                            NAME text not null,
+                            primary key (ID)
+);
+insert into DEVELOPERS (NAME)
+values ('Test Developer 1');
+insert into DEVELOPERS (NAME)
+values ('Test Developer 2');
+insert into DEVELOPERS (NAME)
+values ('Test Developer 3');
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           1,
+           'test bug 1',
+           'bug 1 description',
+           '2016-09-03 00:00:00',
+           2,
+           1,
+           3,
+           1,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           2,
+           'test bug 2',
+           'bug 2 description',
+           '2016-09-03 00:00:00',
+           1,
+           1,
+           2,
+           3,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           3,
+           'test bug 3',
+           'bug 3 description',
+           '2016-09-03 00:00:00',
+           2,
+           1,
+           1,
+           2,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           4,
+           'test bug 4',
+           'bug 4 description',
+           '2016-09-03 00:00:00',
+           1,
+           1,
+           2,
+           1,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           5,
+           'test bug 5',
+           'bug 5 description',
+           '2016-09-03 00:00:00',
+           1,
+           1,
+           3,
+           3,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT,
+    ASSIGNEDWEEK
+)
+values (
+           6,
+           'test story 1',
+           'story 1 description',
+           '2016-09-03 00:00:00',
+           1,
+           2,
+           3,
+           null,
+           1,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT,
+    ASSIGNEDWEEK
+)
+values (
+           7,
+           'test story 2',
+           'story 2 description',
+           '2016-09-03 00:00:00',
+           2,
+           2,
+           2,
+           null,
+           2,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT,
+    ASSIGNEDWEEK
+)
+values (
+           8,
+           'test story 3',
+           'story 3 description',
+           '2016-09-03 00:00:00',
+           3,
+           2,
+           2,
+           null,
+           3,
+           null
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           9,
+           'test story 4',
+           'story 4 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           5
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           10,
+           'test story 5',
+           'story 5 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           8
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           11,
+           'test story 6',
+           'story 6 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           8
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           12,
+           'test story 7',
+           'story 7 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           2
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           13,
+           'test story 8',
+           'story 8 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           3
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           14,
+           'test story 9',
+           'story 9 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           5
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           15,
+           'test story 10',
+           'story 10 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           8
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           16,
+           'test story 11',
+           'story 11 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           1
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           17,
+           'test story 12',
+           'story 12 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           2
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           18,
+           'test story 13',
+           'story 13 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           3
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           19,
+           'test story 14',
+           'story 14 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           8
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           20,
+           'test story 15',
+           'story 15 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           8
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           21,
+           'test story 16',
+           'story 16 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           1
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           22,
+           'test story 17',
+           'story 17 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           2
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           23,
+           'test story 18',
+           'story 18 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           2
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           24,
+           'test story 19',
+           'story 19 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           5
+       );
+insert into ISSUES (
+    ID,
+    TITLE,
+    DESCRIPTION,
+    CREATIONDATE,
+    DEVELOPERID,
+    TYPE,
+    STATUS,
+    PRIORITY,
+    POINT
+)
+values (
+           25,
+           'test story 20',
+           'story 20 description',
+           '2016-09-03 00:00:00',
+           null,
+           2,
+           2,
+           null,
+           8
+       );

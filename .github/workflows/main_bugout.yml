@@ -29,4 +29,4 @@ jobs:
         app-name: 'bugout'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_aea412ff1b9c4a07a044a920fc6e53f0 }}
-        package: '${{ github.workspace }}/target/*.war'
+        package: '${{ github.workspace }}/target/*.jar'

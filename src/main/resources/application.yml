@@ -1,7 +1,7 @@
 ## Database Properties
-spring.datasource.url:
-spring.datasource.username:
-spring.datasource.password:
+spring:
+  datasource:
+    url:
 
 ## Hibernate Properties
 # The SQL dialect makes Hibernate generate better SQL for the chosen database
@@ -29,5 +29,6 @@ management:
     web:
       exposure:
         include: "*"
+
 
 

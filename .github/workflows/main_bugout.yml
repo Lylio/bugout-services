@@ -1,16 +1,17 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - bugout
+name: Build and deploy JAR app to Azure Web App - bugout
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
@@ -28,5 +29,5 @@ jobs:
       with:
         app-name: 'bugout'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_aea412ff1b9c4a07a044a920fc6e53f0 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_05e68298c2bb4b908aa097cb1fdfd3a7 }}
         package: '${{ github.workspace }}/target/*.jar'

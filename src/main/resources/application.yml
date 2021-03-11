@@ -1,10 +1,10 @@
 ## Database Properties
 spring:
-  datasource:
-    url:
   jpa:
     hibernate:
       ddl-auto: none
+  datasource:
+    url:
 
 # The SQL dialect makes Hibernate generate better SQL for the chosen database
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect

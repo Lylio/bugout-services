@@ -1,12 +1,7 @@
-database:
-  url:
-  username:
-  password:
-
 ## Database Properties
-spring.datasource.url: ${database.url}
-spring.datasource.username: ${database.username}
-spring.datasource.password: ${database.password}
+spring.datasource.url:
+spring.datasource.username:
+spring.datasource.password:
 
 ## Hibernate Properties
 # The SQL dialect makes Hibernate generate better SQL for the chosen database

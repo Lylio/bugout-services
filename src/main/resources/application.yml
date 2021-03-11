@@ -7,7 +7,6 @@ database:
 spring.datasource.url: ${database.url}
 spring.datasource.username: ${database.username}
 spring.datasource.password: ${database.password}
-spring.jpa.hibernate.ddl-auto: update
 
 ## Hibernate Properties
 # The SQL dialect makes Hibernate generate better SQL for the chosen database

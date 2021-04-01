@@ -6,7 +6,7 @@
 ## Built with Spring Boot, Angular.js and PostgreSQL
 
 ### Description
-Issue/bug tracking software. Demo can be found at http://bugout.lylio.tech
+Issue/bug tracking software. Demo can be found at https://bugout.lylio.tech
 
 #### Database
 1. Create a Postgres database called 'bugout':  
